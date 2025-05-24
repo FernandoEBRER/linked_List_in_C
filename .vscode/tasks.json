@@ -1,0 +1,24 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build C file",
+      "type": "shell",
+      "command": "gcc",
+      "args": [
+        "-D__MINGW_EXTENSION=__extension__",
+        "-Wall",
+        "-g",
+        "rel.c",
+        "-o",
+        "build/Debug/outDebug"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$gcc"],
+      "detail": "Compila o código C com correção de macro __MINGW_EXTENSION"
+    }
+  ]
+}
